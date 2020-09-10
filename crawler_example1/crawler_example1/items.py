@@ -7,6 +7,7 @@ import scrapy
 
 
 class CrawlerExample1Item(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    address = scrapy.Field()
+    price = scrapy.Field()
+    acreage = scrapy.Field()
+    room = scrapy.Field()
