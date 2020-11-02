@@ -12,7 +12,9 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium import webdriver
-from scrapy_selenium import SeleniumRequest
+
+url_crawler = 'https://batdongsan.com.vn/nha-dat-ban'
+
 
 class Crawler(object):
 
@@ -42,7 +44,7 @@ class Crawler(object):
         # print(self.chromdriver)
         logging.info(self.chromdriver)
         self.driver = webdriver.Chrome(self.chromdriver, chrome_options=chrome_options)
-        self.driver.get("https://batdongsan.com.vn/nha-dat-ban")
+        self.driver.get(url_crawler)
         # self.username = 'FH_Steyr'
         # self.password = '§HS_Steyr_2019_BMW'
         #
@@ -69,6 +71,8 @@ class Crawler(object):
         :param xpath:
         :return:
         """
+        element_present = EC.element_to_be_clickable((By.XPATH, xpath))
+        WebDriverWait(self.driver, self.timeout).until(element_present)
         button = self.driver.find_element_by_xpath(xpath)
         if button:
             button.click()
@@ -82,6 +86,7 @@ class Crawler(object):
         :param text:
         :return:
         """
+
         elem = self.driver.find_element_by_xpath(xpath)
         if elem:
             elem.send_keys(text)
@@ -94,8 +99,19 @@ class Crawler(object):
         :param xpath:
         :return:
         """
+
         elem = self.driver.find_element_by_xpath(xpath)
         return elem.text if elem else ''
+
+    def get(self, xpath):
+        # element_present = EC.element_to_be_clickable((By.XPATH, xpath))
+        # WebDriverWait(self.driver, self.timeout).until(element_present)
+        return self.driver.get(xpath)
+
+    def find_by_xpath(self, xpath):
+        element_present = EC.element_to_be_clickable((By.XPATH, xpath))
+        WebDriverWait(self.driver, self.timeout).until(element_present)
+        return self.driver.find_element_by_xpath(xpath)
 
     def select_dropdown(self, xpath_dropdown, xpath_choose):
         """
@@ -125,6 +141,22 @@ class Crawler(object):
         # select by value
         # select.select_by_value('1')
 
+    def algorithm_crawler(self, url, page_number):
+        for i in range(1, page_number):
+            # Lấy ra được url tiếp theo trang => click vào trong
+            url_current = url + '/p' + str(i)
+            self.get(url_current)
+
+            # Lấy ra được số phần tử house_number có trong page
+            houses = self.driver.find_elements_by_xpath('//*[@id="product-lists-web"]/div')
+            for house in houses:
+                house_url = house.find_element_by_xpath('//div[1]/a/').get_attribute('href')
+                print(house_url)
+            # for j in range(1, ):
+            #     # Click vào từng house
+            #     # Quay trở lại trang trước
+            #     print(j)
+
     def start_crawler(self):
         logging.info('=========Start Crawler==========')
         logging.info('Time: %s', datetime.datetime.today())
@@ -135,14 +167,15 @@ class Crawler(object):
             self.select_dropdown('//div[@class="search-bar shadow-lv-1 clearfix"]/div[@id="divCategoryRe"]',
                                  '//*[@id="divCate"]/ul/li[1]')
             # Click choose "Khu vực"
-            self.select_dropdown('//*[@id="boxSearchForm"]/div/div[4]/div[1]','//*[@id="mCSB_4_container"]/ul/li[1]')
+            self.select_dropdown('//*[@id="boxSearchForm"]/div/div[4]/div[1]', '//*[@id="mCSB_4_container"]/ul/li[1]')
             # Click choose "Mức giá"
-            self.select_dropdown('//*[@id="boxSearchForm"]/div/div[5]/div[1]','//*[@id="mCSB_5_container"]/ul/li[1]')
+            self.select_dropdown('//*[@id="boxSearchForm"]/div/div[5]/div[1]', '//*[@id="mCSB_5_container"]/ul/li[1]')
             # Click "Tìm kiếm"
             self.click_element('//*[@id="btnSearch"]')
-            current_url = self.driver.current_url()
-
-
+            current_url = self.driver.current_url
+            page_number = self.driver.find_element_by_xpath(
+                '//*[@id="product-lists-web"]/div[21]/div/a[6]').get_attribute('pid')
+            self.algorithm_crawler(current_url, int(page_number))
         except Exception as e:
             print(e.__str__())
 

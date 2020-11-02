@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="992c0725-d147-4e69-b18d-117a758f86e8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Selenium_Crawler/.idea/Selenium_Crawler.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Selenium_Crawler/app/crawler/crawler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Selenium_Crawler/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Selenium_Crawler/python_org_search.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/crawler_example1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/crawler_example1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Selenium_Crawler/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Selenium_Crawler/app/crawler/crawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Selenium_Crawler/app/crawler/crawler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler_example1/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/crawler_example1/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler_example1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler_example1/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler_example1/spiders/example.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler_example1/spiders/example.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scrapy_movies/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../scrapy_movies/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scrapy_movies/.idea/scrapy_movies.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../scrapy_movies/.idea/scrapy_movies.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scrapy_movies/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../scrapy_movies/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
