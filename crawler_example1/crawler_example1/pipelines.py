@@ -7,11 +7,11 @@
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
 
-
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 from crawler_example1.settings import MONGODB_COLLECTION, MONGODB_DB, MONGODB_HOST, MONGODB_PORT
 from crawler_example1.spiders.example import logger
+
 
 class CrawlerExample1Pipeline(object):
 
@@ -23,6 +23,7 @@ class CrawlerExample1Pipeline(object):
         self.collection = self.db[MONGODB_COLLECTION]
 
     def process_item(self, item, spider):
+
         self.collection.insert({"_id": ObjectId().__str__(),
                                 'address': item['address'][0],
                                 'price': item['price'][0],

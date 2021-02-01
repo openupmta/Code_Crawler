@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="992c0725-d147-4e69-b18d-117a758f86e8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Selenium_Crawler/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Selenium_Crawler/app/crawler/crawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Selenium_Crawler/app/crawler/crawler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator-enh.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Selenium_Crawler/crawler.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Selenium_Crawler/crawler.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/crawler_example1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/crawler_example1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler_example1/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/crawler_example1/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler_example1/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler_example1/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler_example1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler_example1/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler_example1/spiders/example.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler_example1/spiders/example.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,22 +32,14 @@
   </component>
   <component name="ProjectId" id="1hGUXTwYrZhW2VZVbltjyWF0dmu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Python.main">
     <configuration name="example" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -91,6 +91,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -128,34 +129,14 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/crawler_example1/spiders/example.py</url>
-          <line>76</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/crawler_example1/spiders/example.py</url>
-          <line>41</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/crawler_example1/spiders/example.py</url>
-          <line>56</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="next_page_url.xpath('a')" language="Python" />

@@ -54,8 +54,7 @@ class ExampleSpider(scrapy.Spider):
 
     def page_info(self, response):
         try:
-            body = response.xpath('//*[@class="product-lists mar-top-16"]').xpath(
-                '//div[@class="product-image "]/a/@href')
+            body = response.xpath('//*[@class="vip1 product-item clearfix"]/a/@href')
             for info in body:
                 url = info.get()
                 logger.info('Crawler : ' + url)

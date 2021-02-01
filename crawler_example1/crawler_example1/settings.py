@@ -18,7 +18,7 @@ MONGODB_DB = 'crawler'
 MONGODB_COLLECTION = 'data_v1'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-# USER_AGENT = 'crawler_example1 (+http://www.yourdomain.com)'
+# USER_AGENT = 'crawler_example1 (+http://www.yourdomain.com)'r
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
